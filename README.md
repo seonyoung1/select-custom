@@ -10,5 +10,4 @@ var SelectList = new SelectCustom('.select');
 SelectList.change('.select', 'orange');
 ```
 
-
-#### [데모 보러가기](http://seonn.dothome.co.kr/select-custom/)
+#### <a href="http://seonn.dothome.co.kr/select-custom/" target="_blank">데모 보러가기</a>
