@@ -10,10 +10,40 @@
 </head>
 <body>
 
+<select class="select select1">
+	<option value="javascript">javascript</option>
+	<option value="python">python</option>
+	<option value="java">java</option>
+</select>
+<br />
+<select class="select select2">
+	<option value="apple">apple</option>
+	<option value="orange">orange</option>
+</select>
+<br />
+<select class="select select3">
+	<option value="none">--select--</option>
+	<option value="0">banana</option>
+	<option value="1">melon</option>
+</select>
 
 <script type="text/javascript" src="js/lib/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="js/select.custom.js"></script>
 <script type="text/javascript" src="js/common.js"></script>
 <script>
+
+	var selectBox = $('select.select');
+	var SelectList;
+	selectBox.each(function(){
+		SelectList = new SelectCustom($(this));
+	});
+
+	// 값 변경(selector, value)
+	SelectList.change('.select2', 'orange');
+
+	// 셀렉트 동적 추가
+	// SelectList.create('.select4');
+	// new SelectCustom('.select4');
 
 </script>
 </body>

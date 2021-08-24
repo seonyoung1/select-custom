@@ -1,6 +1,54 @@
 @charset "utf-8";
 
+body{
+    padding: 50px;
+}
 
+.select-box{
+    position: relative;
+    width: 150px;
+    .current{
+        width: 100%;
+        border: 1px solid #777;
+        border-radius: 2px;
+        padding: 5px 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &:after{
+            content: "▼";
+            font-size: 10px;
+        }
+    }
+    .option-dropdown{
+        margin-top: -1px;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-top: 0;
+        border-radius: 2px;
+        display: none;
+        .item{
+            display: block;
+            width: 100%;
+            padding: 5px 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            &:last-child{
+                border-bottom: 0;
+            }
+        }
+    }
+    &.is-active{
+        .current{
+            &:after{
+                content: "▲";
+            }
+        }
+        .option-dropdown{
+            display: block;
+        }
+    }
+}
 
 
 

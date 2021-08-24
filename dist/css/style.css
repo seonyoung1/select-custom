@@ -1,5 +1,6 @@
-/*! Build Date: 2021. 8. 24. 오후 2:08:09 */
+/*! Build Date: 2021. 8. 24. 오후 2:33:13 */
 @import url(https://cdn.jsdelivr.net/gh/theeluwin/NotoSansKR-Hestia@master/stylesheets/NotoSansKR-Hestia.css);
+@charset "UTF-8";
 html, body, div, span, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 abbr, address, cite, code,
@@ -149,6 +150,59 @@ a {
 img {
   vertical-align: middle;
   font-size: 0;
+}
+
+body {
+  padding: 50px;
+}
+
+.select-box {
+  position: relative;
+  width: 150px;
+}
+
+.select-box .current {
+  width: 100%;
+  border: 1px solid #777;
+  border-radius: 2px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.select-box .current:after {
+  content: "▼";
+  font-size: 10px;
+}
+
+.select-box .option-dropdown {
+  margin-top: -1px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-radius: 2px;
+  display: none;
+}
+
+.select-box .option-dropdown .item {
+  display: block;
+  width: 100%;
+  padding: 5px 10px;
+  border-bottom: 1px solid #ccc;
+  text-align: left;
+}
+
+.select-box .option-dropdown .item:last-child {
+  border-bottom: 0;
+}
+
+.select-box.is-active .current:after {
+  content: "▲";
+}
+
+.select-box.is-active .option-dropdown {
+  display: block;
 }
 
 
